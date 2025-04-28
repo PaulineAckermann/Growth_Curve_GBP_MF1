@@ -32,22 +32,22 @@ p <- ggplot() +
   geom_hline(yintercept = 1, linetype = "dashed", color = "black") +
   geom_hline(yintercept = 2, linetype = "dashed", color = "black") +
   annotate("text", x = max(c(df_gbp$`t.GBP`, df_mf1$`t.MF1`)), y = 2.6, 
-           label = "Target range", hjust = 1, vjust = 11.0, size = 4) +
+           label = "Target range", hjust = 1, vjust = 9.0, size = 5) +
   annotate("text", x = 3, y = min(c(df_gbp$`OD.GBP`, df_mf1$`OD.MF1`)), 
-           label = "MF 1 inoculation +60 mL", vjust = 0, hjust = -0.05, size = 4, color = "black") +
+           label = "MF 1 inoculation +60 mL", vjust = 0, hjust = -0.05, size = 5, color = "black") +
   geom_segment(aes(x = 3, xend = 3, y = 0, yend = y_mf1_at_3), color = "red", linetype = "dotted") +
   # IPTG induction labels
   annotate("text", x = 4.5, y = 1.244, 
-           label = "Induction (IPTG)", hjust = -0.1, vjust = -0.8, size = 4, color = "blue") +
+           label = "Induction (IPTG)", hjust = -0.1, vjust = -0.8, size = 5, color = "blue") +
   annotate("text", x = 6.5, y = 0.619, 
-           label = "Induction (IPTG)", hjust = 0.8, vjust = -0.8, size = 4, color = "red") +
+           label = "Induction (IPTG)", hjust = 0.8, vjust = -0.8, size = 5, color = "red") +
   # Axis labels
   labs(x = "Time t [h]", y = "OD600") +
   theme_minimal() +
   theme(
-    axis.title.x = element_text(size = 13),
-    axis.title.y = element_text(size = 13),
-    legend.text = element_text(size = 11)
+    axis.title.x = element_text(size = 14),
+    axis.title.y = element_text(size = 14),
+    legend.text = element_text(size = 14)
   )
 # show plot
 print(p)
